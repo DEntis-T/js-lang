@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://hackertyper.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Hacker Typer : Fake Coding &amp; Hacker Simulator To Prank Your Friends</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="canonical" href="https://hackertyper.com/">
+<meta name="keywords" content=" hacker typer, hackertyper, prank, Objective-C,C,C++,Rust,Swift,Kotlin,Python,Ruby,Javascript,HTML&amp;CSS,programming,programmer,web developer,software developer">
+<meta name="description" content="Prank your friends with Hacker Typer&#39;s Hacker Prank Simulator. We make it look like you&#39;re coding like a real hacker. Just start typing, we&#39;ll do the rest ;)">
+<meta property="og:title" content="HackerTyper: Use This Site To Prank Your Friends With Your Coding Skills :)">
+<meta property="og:description" content="This simulator makes it look like you&#39;re actually coding like a real pro. Just start typing, we&#39;ll take care of the rest ;)">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hackertyper.com/">
+<meta property="og:image" content="https://hackertyper.com/hackertyper.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="A web browser with C++ code sample. Above it are the words &#39;Hacker Typer: Just start typing...&#39; beneath it are the words &#39;We&#39;ll make it look like you&#39;re actually coding&#39;">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hacker Typer: Coding Simulator">
+<meta name="twitter:description" content="The Hacker Typer simulator makes it look like you&#39;re actually coding like a real hacker. Just start typing, we&#39;ll take care of the rest ;)">
+<meta name="twitter:image" content="https://hackertyper.com/hackertyper.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://hackertyper.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hackertyper.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hackertyper.com/favicon-16x16.png">
+<link rel="manifest" href="https://hackertyper.com/site.webmanifest">
+<link rel="preconnect" href="https://static.cloudflareinsights.com/">
+<link rel="dns-prefetch" href="https://static.cloudflareinsights.com/">
+<link rel="preconnect" href="https://cdn.onesignal.com/">
+<link rel="dns-prefetch" href="https://cdn.onesignal.com/">
+<link rel="preconnect" href="https://static.getclicky.com/">
+<link rel="dns-prefetch" href="https://static.getclicky.com/">
+<link rel="preconnect" href="https://sjbjk.com/">
+<link rel="dns-prefetch" href="https://sjbjk.com/">
+
+<style type="text/css">
+html, body ,a{
+        background:#000000;
+        color:#00FF00;
+        font-family:monospace;
+        height: 100%;
+        text-decoration:  none;
+}
+
+img{
+  width:100%;
+height:100%;
+max-width: max-content;
+}
+
+.inverse{
+        background:#00FF00;
+        color:#000000;
+        font-family:monospace;
+        height: 100%;
+}
+.wrapper {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+        background:#0000ff;
+}
+
+.accessGranted{
+        font-size: 2em;
+        position:fixed;
+        top:200px;
+        background:#333;
+        padding:20px;
+        border:1px solid #999;
+        width:300px;
+        left:50%;
+        margin-left:-150px;
+        text-align:center;
+        display: none;
+}
+
+.accessDenied{
+        font-size: 2em;
+        position:fixed;
+        top:200px;
+        color:#F00;
+        background:#511;
+        padding:20px;
+        border:1px solid #F00;
+        width:300px;
+        left:50%;
+        margin-left:-150px;
+        text-align:center;
+        display: none;
+}
+
+* {/* for demo only*/
+    margin:0px;
+    padding:0px
+}
+
+
+.outer {
+    margin:auto;
+    min-height:99%;
+    margin-top:0px;/*footer height - this drags the outer 40px up through the top of the monitor */
+    text-align:left;
+}
+* html .outer {
+    height:100%
+}
+#header {
+    border-top:40px solid #fff; /* soak up negative margin and allows header to start at top of page*/
+}
+.footer {/* footer now sits at bottom of window*/
+    margin:auto;
+    height:40px;/* must match negative margin of #outer */
+    clear:both;
+}
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+h1, h2, p {
+    padding:0 10px;
+}
+h3 {
+    padding:0 10px;
+    font-size: 13px;
+}
+.outer:after {/* thank you Erik J - instead of using display table for ie8*/
+    clear:both;
+    display:block;
+    height:1%;
+    content:" ";
+}
+
+.settings {
+        border: #11a91b;
+        background-color: black;
+        border-style: solid;
+        border-width: thin;
+        position: absolute;
+
+        left: 20%;
+        top: 10px;
+        height: 600px;
+        width: -webkit-fill-available;
+
+        min-width: 320px;
+        max-width: 550px;
+        
+        max-height: 610px;
+        padding: 5px;
+      }
+
+      .settings-btn {
+        border: #11a91b;
+        border-style: solid;
+        border-width: thin;
+        position: relative;
+        left: 26%;
+        top: 2%;
+        padding: 15px;
+        width: 165px;
+        height: 15px;
+        cursor: pointer;        
+      }
+
+      .settings-btn:hover {
+        background-color: #11a91b;
+      }
+
+      .adunit {
+        top:50px;
+        position: relative;
+        cursor: pointer;
+        
+        
+      }
+
+      .adunit2 {
+        position: relative;
+        bottom: 210px;
+        cursor: pointer;
+        float:right;
+        
+      }
+      .close {
+        cursor: pointer;
+      }
+</style>
+<link rel="stylesheet" href="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/style.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+<script type="text/javascript" async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/js"></script><script type="text/javascript" async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/js(1)"></script><script type="text/javascript" async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/ga.js.download"></script><script async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/gtm.js.download"></script><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How to get access granted in hacker typer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<a href='https://hackertyper.com/?utm_source=rsag'>Hit ALT 3 times for Access Granted</a>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "How to get access denied in hacker typer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<a href='https://hackertyper.com/?utm_source=rsad'>Hit CAPS LOCK 3 for Access Denied</a>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can I clear access granted or access denied?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"<a href='https://hackertyper.com/?utm_source=rscagd'>Hit ESCAPE to clear Access Denied/Granted</a>"
+          }
+        }]
+    }
+    </script>
+<script type="text/javascript" async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/OneSignalSDK.js.download"></script><script type="text/javascript" async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/js(2)"></script><script src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/OneSignalPageSDKES6.js.download" async=""></script><link rel="stylesheet" href="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/OneSignalSDKStyles.css"></head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8RV93C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="console" class="outer"><br><br><br>struct&nbsp;group_info&nbsp;init_groups&nbsp;=&nbsp;{&nbsp;.usage&nbsp;=&nbsp;ATOMIC_INIT(2)&nbsp;};<br><br>struct&nbsp;group_info&nbsp;*groups_alloc(int&nbsp;gidsetsize){<br><br>&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;group_info&nbsp;*group_info;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;nblocks;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;nblocks&nbsp;=&nbsp;(gidsetsize&nbsp;+&nbsp;NGROUPS_PER_BLOCK&nbsp;-&nbsp;1)&nbsp;/&nbsp;NGROUPS_PER_BLOCK;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;Make&nbsp;sure&nbsp;we&nbsp;always&nbsp;allocate&nbsp;at&nbsp;least&nbsp;one&nbsp;indirect&nbsp;block&nbsp;pointer&nbsp;*/<br><br>&nbsp;&nbsp;&nbsp;&nbsp;nblocks&nbsp;=&nbsp;nblocks&nbsp;?&nbsp;:&nbsp;1;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;group_info&nbsp;=&nbsp;kmalloc(sizeof(*group_info)&nbsp;+&nbsp;nblocks*sizeof(gid_t&nbsp;*),&nbsp;GFP_USER);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!group_info)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;NULL;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;group_info-&gt;ngroups&nbsp;=&nbsp;gidsetsize;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;group_info-&gt;nblocks&nbsp;=&nbsp;nblocks;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;atomic_set(&amp;group_info-&gt;usage,&nbsp;1);<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(gidsetsize&nbsp;&lt;=&nbsp;NGROUPS_SMALL)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group_info-&gt;blocks[0]&nbsp;=&nbsp;group_info-&gt;small_block;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;nblocks;&nbsp;i++)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gid_t&nbsp;*b;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b&nbsp;=&nbsp;(void&nbsp;*)__get_free_page(GFP_USER);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!b)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goto&nbsp;out_undo_partial_alloc;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group_info-&gt;blocks[i]&nbsp;=&nbsp;b;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;group_info;<br><br><br><br>out_undo_partial_alloc:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(--i&nbsp;&gt;=&nbsp;0)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free_page((unsigned&nbsp;long)group_info-&gt;blocks[i]);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;kfree(group_info);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;NULL;<br><br>}<br><br><br><br>EXPORT_SYMBOL(groups_alloc);<br><br><br><br>void&nbsp;groups_free(struct&nbsp;group_info&nbsp;*group_info)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(group_info-&gt;blocks[0]&nbsp;!=&nbsp;group_info-&gt;small_block)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;group_info-&gt;nblocks;&nbsp;i++)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free_page((unsigned&nbsp;long)group_info-&gt;blocks[i]);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;kfree(group_info);<br><br>}<br><br><br><br>EXPORT_SYMBOL(groups_free);<br><br><br><br>/*&nbsp;export&nbsp;the&nbsp;group_info&nbsp;to&nbsp;a&nbsp;user-space&nbsp;array&nbsp;*/<br><br>static&nbsp;int&nbsp;groups_to_user(gid_t&nbsp;__user&nbsp;*grouplist,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;group_info&nbsp;*group_info)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;count&nbsp;=&nbsp;group_info-&gt;ngroups;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;group_info-&gt;nblocks;&nbsp;i++)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;cp_count&nbsp;=&nbsp;min(NGROUPS_PER_BLOCK,&nbsp;count);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;len&nbsp;=&nbsp;cp_count&nbsp;*&nbsp;sizeof(*grouplist);<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(copy_to_user(grouplist,&nbsp;group_info-&gt;blocks[i],&nbsp;len))<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;-EFAULT;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grouplist&nbsp;+=&nbsp;NGROUPS_PER_BLOCK;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;-=&nbsp;cp_count;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br><br>}<br><br><br><br>/*&nbsp;fill&nbsp;a&nbsp;group_info&nbsp;from&nbsp;a&nbsp;user-space&nbsp;array&nbsp;-&nbsp;it&nbsp;must&nbsp;be&nbsp;allocated&nbsp;already&nbsp;*/<br><br>static&nbsp;int&nbsp;groups_from_user(struct&nbsp;group_info&nbsp;*group_info,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;gid_t&nbsp;__user&nbsp;*grouplist)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;count&nbsp;=&nbsp;group_info-&gt;ngroups;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;group_info-&gt;nblocks;&nbsp;i++)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;cp_count&nbsp;=&nbsp;min(NGROUPS_PER_BLOCK,&nbsp;count);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;len&nbsp;=&nbsp;cp_count&nbsp;*&nbsp;sizeof(*grouplist);<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(copy_from_user(group_info-&gt;blocks[i],&nbsp;grouplist,&nbsp;len))<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;-EFAULT;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grouplist&nbsp;+=&nbsp;NGROUPS_PER_BLOCK;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;-=&nbsp;cp_count;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br><br>}<br><br><br><br>/*&nbsp;a&nbsp;simple&nbsp;Shell&nbsp;sort&nbsp;*/<br><br>static&nbsp;void&nbsp;groups_sort(struct&nbsp;group_info&nbsp;*group_info)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;base,&nbsp;max,&nbsp;stride;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;gidsetsize&nbsp;=&nbsp;group_info-&gt;ngroups;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(stride&nbsp;=&nbsp;1;&nbsp;stride&nbsp;&lt;&nbsp;gidsetsize;&nbsp;stride&nbsp;=&nbsp;3&nbsp;*&nbsp;stride&nbsp;+&nbsp;1)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;/*&nbsp;nothing&nbsp;*/<br><br>&nbsp;&nbsp;&nbsp;&nbsp;stride&nbsp;/=&nbsp;3;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(stride)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max&nbsp;=&nbsp;gidsetsize&nbsp;-&nbsp;stride;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(base&nbsp;=&nbsp;0;&nbsp;base&nbsp;&lt;&nbsp;max;&nbsp;base++)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;left&nbsp;=&nbsp;base;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;right&nbsp;=&nbsp;left&nbsp;+&nbsp;stride;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gid_t&nbsp;tmp&nbsp;=&nbsp;GROUP_AT(group_info,&nbsp;right);<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(left&nbsp;&gt;=&nbsp;0&nbsp;&amp;&amp;&nbsp;GROUP_AT(group_info,&nbsp;left)&nbsp;&gt;&nbsp;tmp)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GROUP_AT(group_info,&nbsp;right)&nbsp;=<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GROUP_AT(group_info,&nbsp;left);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right&nbsp;=&nbsp;left;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left&nbsp;-=&nbsp;stride;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GROUP_AT(group_info,&nbsp;right)&nbsp;=&nbsp;tmp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stride&nbsp;/=&nbsp;3;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>}<br><br><br><br>/*&nbsp;a&nbsp;simple&nbsp;bsearch&nbsp;*/<br><br>int&nbsp;groups_search(const&nbsp;struct&nbsp;group_info&nbsp;*group_info,&nbsp;gid_t&nbsp;grp)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;left,&nbsp;right;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!group_info)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;left&nbsp;=&nbsp;0;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;right&nbsp;=&nbsp;group_info-&gt;ngroups;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(left&nbsp;&lt;&nbsp;right)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;mid&nbsp;=&nbsp;(left+right)/2;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(grp&nbsp;&gt;&nbsp;GROUP_AT(group_info,&nbsp;mid))<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left&nbsp;=&nbsp;mid&nbsp;+&nbsp;1;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(grp&nbsp;&lt;&nbsp;GROUP_AT(group_info,&nbsp;mid))<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right&nbsp;=&nbsp;mid;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;1;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br><br>}<br><br><br><br>/**<br><br>&nbsp;*&nbsp;set_groups&nbsp;-&nbsp;Change&nbsp;a&nbsp;group&nbsp;subscription&nbsp;in&nbsp;a&nbsp;set&nbsp;of&nbsp;credentials<br><br>&nbsp;*&nbsp;@new:&nbsp;The&nbsp;newly&nbsp;prepared&nbsp;set&nbsp;of&nbsp;credentials&nbsp;to&nbsp;alter<br><br>&nbsp;*&nbsp;@group_info:&nbsp;The&nbsp;group&nbsp;list&nbsp;to&nbsp;install<br><br>&nbsp;*<br><br>&nbsp;*&nbsp;Validate&nbsp;a&nbsp;group&nbsp;subscription&nbsp;and,&nbsp;if&nbsp;valid,&nbsp;insert&nbsp;it&nbsp;into&nbsp;a&nbsp;set<br><br>&nbsp;*&nbsp;of&nbsp;credentials.<br><br>&nbsp;*/<br><br>int&nbsp;set_groups(struct&nbsp;cred&nbsp;*new,&nbsp;struct&nbsp;group_info&nbsp;*group_info)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;put_group_info(new-&gt;group_info);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;groups_sort(group_info);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;get_group_info(group_info);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;new-&gt;group_info&nbsp;=&nbsp;group_info;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br><br>}<br><br><br><br>EXPORT_SYMBOL(set_groups);<br><br><br><br>/**<br><br>&nbsp;*&nbsp;set_current_groups&nbsp;-&nbsp;Change&nbsp;current's&nbsp;group&nbsp;subscription<br><br>&nbsp;*&nbsp;@group_info:&nbsp;The&nbsp;group&nbsp;list&nbsp;to&nbsp;impose<br><br>&nbsp;*<br><br>&nbsp;*&nbsp;Validate&nbsp;a&nbsp;group&nbsp;subscription&nbsp;and,&nbsp;if&nbsp;valid,&nbsp;impose&nbsp;it&nbsp;upon&nbsp;current's&nbsp;task<br><br>&nbsp;*&nbsp;security&nbsp;record.<br><br>&nbsp;*/<br><br>int&nbsp;set_current_groups(struct&nbsp;group_info&nbsp;*group_info)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;cred&nbsp;*new;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;ret;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;=&nbsp;prepare_creds();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!new)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;-ENOMEM;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;set_groups(new,&nbsp;group_info);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(ret&nbsp;&lt;&nbsp;0)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;abort_creds(new);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ret;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;commit_creds(new);<br><br>}<br><br><br><br>EXPORT_SYMBOL(set_current_groups);<br><br><br><br>SYSCALL_DEFINE2(getgroups,&nbsp;int,&nbsp;gidsetsize,&nbsp;gid_t&nbsp;__user&nbsp;*,&nbsp;grouplist)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;cred&nbsp;*cred&nbsp;=&nbsp;current_cred();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(gidsetsize&nbsp;&lt;&nbsp;0)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;-EINVAL;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;no&nbsp;need&nbsp;to&nbsp;grab&nbsp;task_lock&nbsp;here;&nbsp;it&nbsp;cannot&nbsp;change&nbsp;*/<br><br>&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;=&nbsp;cred-&gt;group_info-&gt;ngroups;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(gidsetsize)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(i&nbsp;&gt;&nbsp;gidsetsize)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;=&nbsp;-EINVAL;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goto&nbsp;out;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(groups_to_user(grouplist,&nbsp;cred-&gt;group_info))&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;=&nbsp;-EFAULT;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goto&nbsp;out;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>out:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;i;<br><br>}<br><br><br><br>/*<br><br>&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;SMP:&nbsp;Our&nbsp;groups&nbsp;are&nbsp;copy-on-write.&nbsp;We&nbsp;can&nbsp;set&nbsp;them&nbsp;safely<br><br>&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;without&nbsp;another&nbsp;task&nbsp;interfering.<br><br>&nbsp;*/<br><br><br><br>SYSCALL_DEFINE2(setgroups,&nbsp;int,&nbsp;gidsetsize,&nbsp;gid_t&nbsp;__user&nbsp;*,&nbsp;grouplist)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;group_info&nbsp;*group_info;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;retval;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!nsown_capable(CAP_SETGID))<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;-EPERM;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;((unsigned)gidsetsize&nbsp;&gt;&nbsp;NGROUPS_MAX)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;-EINVAL;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;group_info&nbsp;=&nbsp;groups_alloc(gidsetsize);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!group_info)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;-ENOMEM;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;retval&nbsp;=&nbsp;groups_from_user(group_info,&nbsp;grouplist);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(retval)&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;put_group_info(group_info);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;retval;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;retval&nbsp;=&nbsp;set_current_groups(group_info);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;put_group_info(group_info);<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;retval;<br><br>}<br><br><br><br>/*<br><br>&nbsp;*&nbsp;Check&nbsp;whether&nbsp;we're&nbsp;fsgid/egid&nbsp;or&nbsp;in&nbsp;the&nbsp;supplemental&nbsp;group..<br><br>&nbsp;*/<br><br>int&nbsp;in_group_p(gid_t&nbsp;grp)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;cred&nbsp;*cred&nbsp;=&nbsp;current_cred();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;retval&nbsp;=&nbsp;1;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(grp&nbsp;!=&nbsp;cred-&gt;fsgid)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retval&nbsp;=&nbsp;groups_search(cred-&gt;group_info,&nbsp;grp);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;retval;<br><br>}<br><br><br><br>EXPORT_SYMBOL(in_group_p);<br><br><br><br>int&nbsp;in_egroup_p(gid_t&nbsp;grp)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;cred&nbsp;*cred&nbsp;=&nbsp;current_cred();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;retval&nbsp;=&nbsp;1;<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(grp&nbsp;!=&nbsp;cred-&gt;egid)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retval&nbsp;=&nbsp;groups_search(cred-&gt;group_info,&nbsp;grp);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;retval;<br><br>}</div>
+<div id="menu" class="footer">
+<span class="inverse">Sponsored Links</span>
+<table width="100%">
+<tbody><tr>
+<td width="2%"><a href="https://hackertyper.com/#" id="showhelp"><span class="inverse">Ctrl+H</span></a></td>
+<td width="20%">Help?</td>
+<td width="2%"><a href="http://auto-insurance.cyou/" target="_blank" data-sponslot="ss1" rel="noopener"><span class="inverse">Ctrl+A</span></a></td>
+<td width="20%"><a href="http://auto-insurance.cyou/" target="_blank" data-sponslot="ss1" rel="noopener"> Auto Insurance Quotes</a></td>
+<td width="2%"><a href="http://codingschools.club/" target="_blank" data-sponslot="ss2" rel="noopener"><span class="inverse">Ctrl+M</span></a></td>
+<td width="20%"><a href="http://codingschools.club/" target="_blank" data-sponslot="ss2" rel="noopener"> Code Like a Jedi</a></td>
+<td width="2%"><a href="http://videogamecodingschools.cyou/?v=g2" target="_blank" data-sponslot="ss3" rel="noopener"><span class="inverse">Ctrl+G</span></a></td>
+<td width="20%"><a href="http://videogamecodingschools.cyou/?v=g2" target="_blank" data-sponslot="ss3" rel="noopener"> Make Your Own Games</a></td>
+</tr>
+<tr>
+<td width="2%"><a href="http://webdesignschool.cyou/?v=aa2" target="_blank" data-sponslot="ss4" rel="noopener"><span class="inverse">Ctrl+Q</span></a></td>
+<td width="20%"><a href="http://webdesignschool.cyou/?v=aa2" target="_blank" data-sponslot="ss4" rel="noopener"> Learn Web &amp; Graphics Design</a></td>
+<td width="2%"><a href="http://webdesignschool.cyou/" target="_blank" data-sponslot="ss5" rel="noopener"><span class="inverse">Ctrl+Q</span></a></td>
+<td width="20%"><a href="http://webdesignschool.cyou/" target="_blank" data-sponslot="ss5" rel="noopener"> Web Design Resources</a></td>
+<td width="2%"><a href="http://videogamecodingschools.cyou/" target="_blank" data-sponslot="ss6" rel="noopener"><span class="inverse">Ctrl+G</span></a></td>
+<td width="20%"><a href="http://videogamecodingschools.cyou/" target="_blank" data-sponslot="ss6" rel="noopener"> Game Coding School</a></td>
+<td width="2%"><a href="http://codingschools.club/?v=cs2" target="_blank" data-sponslot="ss7" rel="noopener"><span class="inverse">Ctrl+M</span></a></td>
+<td width="20%"><a href="http://codingschools.club/?v=cs2" target="_blank" data-sponslot="ss7" rel="noopener"> Learn To Code</a></td>
+</tr>
+</tbody></table>
+</div>
+<div id="gran" class="accessGranted"><h2>ACCESS GRANTED</h2></div>
+<div id="deni" class="accessDenied"><h2>ACCESS DENIED</h2></div>
+<div id="settings" class="settings" style="display: none;">
+<h1>
+Welcome To Hacker Typer
+</h1>
+<br><br>
+<div>
+<span style="font-weight: bold"> Quick Start Instructions:</span><br>
+Start typing on the keyboard to 'code'<br>
+<br>
+<h3>How to get access granted in hacker typer?</h3>
+<p>Hit ALT 3 times for "Access Granted"</p>
+<h3>How to get access denied in hacker typer?</h3>
+Hit CAPS LOCK 3 for "Access Denied" <br>
+<h3>How can I clear access granted or access denied?</h3>
+Hit ESCAPE to clear "Access Denied/Granted" <br>
+</div>
+<br><br>
+<span id="settings-btn" class="settings-btn">Start HackerTyping...</span>
+<div class="adunit">
+<a href="http://codingschools.club/" target="_blank" rel="noopener" id="htbanner"><img src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/codingschool.jpg" width="530" height="310" alt="Hacker Typer Coding School: Learn To Code like A Jedi"></a>
+</div>
+</div>
+<script defer="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/script.js.download" type="text/javascript"></script>
+<script>
+  let sponLinks = [
+  {url:'https://docutyper.com/',description:'New: DocuTyper',keyCodeText:'Ctrl+T'},
+    {url:'http://webdesignschool.cyou/',description:'Web Design Classes',keyCodeText:'Ctrl+Q'},
+    {url:'http://webdesignschool.cyou/',description:'Web & Graphics Design Tutorial',keyCodeText:'Ctrl+Q'},
+    {url:'http://webdesignschool.cyou/',description:'Web Design Tutorial',keyCodeText:'Ctrl+Q'},
+    {url:'http://webdesignschool.cyou/',description:'Web Designer Links',keyCodeText:'Ctrl+Q'},
+    {url:'http://webdesignschool.cyou/',description:'Find Web Design Resources',keyCodeText:'Ctrl+Q'},
+    {url:'http://codingschools.club/',description:'Become A Software Developer',keyCodeText:'Ctrl+M'},
+    {url:'http://codingschools.club/',description:'Software Developer Links',keyCodeText:'Ctrl+M'},
+    {url:'http://codingschools.club/',description:'Learn How To Code',keyCodeText:'Ctrl+M'},
+    {url:'http://video-games.cyou/',description:'Gamer Central',keyCodeText:'Ctrl+O'},    
+    {url:'http://video-games.cyou/',description:'Game Coding Jedi',keyCodeText:'Ctrl+O'},
+    {url:'http://video-games.cyou/',description:'Learn Game Coding',keyCodeText:'Ctrl+O'},
+    {url:'http://auto-insurance.cyou/',description:'Get Car Insurance Quotes',keyCodeText:'Ctrl+A'},
+    {url:'http://auto-insurance.cyou/',description:'Shop For Car Insurance',keyCodeText:'Ctrl+A'},      
+  ]
+  shuffleArray(sponLinks)
+sponLinks.unshift({url:'http://video-games.cyou/',description:'Learn Game Coding',keyCodeText:'Ctrl+O'})
+sponLinks.unshift({url:'http://video-games.cyou/',description:'Game Coding Jedi',keyCodeText:'Ctrl+O'})
+sponLinks.push({url:'http://webdesignschool.cyou/',description:'Web Design Classes',keyCodeText:'Ctrl+Q'})
+
+  let clickLinks = [
+    {url:'http://webdesignschool.cyou/',description:'Web Design Classes',keyCodeText:'Ctrl+Q'},
+    {url:'http://webdesignschool.cyou/',description:'Web & Graphics Design Tutorial',keyCodeText:'Ctrl+Q'},
+    {url:'http://webdesignschool.cyou/',description:'Web Design Tutorial',keyCodeText:'Ctrl+Q'},
+    {url:'http://webdesignschool.cyou/',description:'Web Designer Links',keyCodeText:'Ctrl+Q'},
+    {url:'http://webdesignschool.cyou/',description:'Find Web Design Resources',keyCodeText:'Ctrl+Q'},
+    {url:'http://codingschools.club/',description:'Become A Software Developer',keyCodeText:'Ctrl+M'},
+    {url:'http://codingschools.club/',description:'Software Developer Links',keyCodeText:'Ctrl+M'},
+    {url:'http://codingschools.club/',description:'Learn How To Code',keyCodeText:'Ctrl+M'},
+    {url:'http://video-games.cyou/',description:'Gamer Central',keyCodeText:'Ctrl+O'},    
+    {url:'http://video-games.cyou/',description:'Game Coding Jedi',keyCodeText:'Ctrl+O'},
+    {url:'http://video-games.cyou/',description:'Learn Game Coding',keyCodeText:'Ctrl+O'},
+    {url:'http://auto-insurance.cyou/',description:'Get Car Insurance Quotes',keyCodeText:'Ctrl+A'},
+    {url:'http://auto-insurance.cyou/',description:'Shop For Car Insurance',keyCodeText:'Ctrl+A'},      
+  ]
+  shuffleArray(clickLinks) 
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    initLinks(event,sponLinks);
+   
+  document
+        .getElementById('settings-btn')
+        .addEventListener('click', (e)=> {
+     
+ document.querySelector('.settings').style.display = "none"
+         
+        });
+ 
+    window.addEventListener('click',(e)=>{
+      
+      if(e.target.parentElement.id =='htbanner'){
+        e.preventDefault()
+        let lUrl=e.target.parentElement.href
+        go(lUrl)
+     }
+
+    },false)
+
+})
+
+  function initLinks(e,sponLinks){
+    let spots= document.querySelectorAll('a[data-sponSlot]')
+        spots.forEach(element => {
+          element.addEventListener('click', function (e){
+            updateLinks(e)
+          } ,true);
+        });
+  }
+  
+  function updateLinks(e){
+          e.preventDefault();  
+          goUrl=''        
+          let slotData = sponLinks.shift()
+          e.target.dataset.sponslot? goUrl=e.target.href:goUrl=e.target.parentElement.href           
+          if(slotData){
+            if(e.target.dataset.sponslot){    
+               goUrl=e.target.href                 
+              e.target.href =slotData.url
+              e.target.innerText =slotData.description
+              e.target.parentElement.previousElementSibling.firstElementChild.href=slotData.url
+              e.target.parentElement.previousElementSibling.firstElementChild.innerHTML=`<span class="inverse">${slotData.keyCodeText}</span>`
+          }else{
+            goUrl=newTarget.href
+              let newTarget=e.target.parentElement
+              newTarget.href = slotData.url
+              newTarget.firstElementChild.innerText=slotData.keyCodeText
+              newTarget.parentElement.nextElementSibling.firstChild.href=slotData.url
+              newTarget.parentElement.nextElementSibling.firstChild.innerText=slotData.description
+            }
+            go()            
+            return true
+          }   
+            go()
+            return true;  
+} 
+
+function safariCheck(){
+  if (/apple/i.test(navigator.vendor) && !navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+    return true
+  }
+  return false
+}
+
+function go(lUrl) {  
+  let vvar=''
+  if(lUrl){
+    redirectUrl =lUrl
+    vvar='utm_src=htbanner'
+  }else{
+    redirectUrl =goUrl
+    vvar='v=sser'    
+  }
+  if (safariCheck()) {
+    shuffleArray(clickLinks);
+    while (clickLinks[0].url == redirectUrl) {      
+      shuffleArray(clickLinks);
+    }
+
+    let slotData = clickLinks[0];
+
+    if (slotData) {
+   //   cUrl = slotData.url;
+cUrl = 'https://docutyper.com/?utm_source=ht'; 
+    }
+
+   // window.open(`${cUrl}?v=godd`, '_blank');
+window.open(`${cUrl}?v=godd`, '_blank');   
+ window.open(`${redirectUrl}?${vvar}`, '_blank');
+  } else {
+    window.open(`${redirectUrl}?${vvar}`, '_blank');
+  }
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+
+</script>
+<script defer="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/beacon.min.js.download" data-cf-beacon="{&quot;token&quot;: &quot;c16ffb0c07354c81bca3529e12bca759&quot;}"></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "0ca47ea8-d791-4740-b8e6-a2d48147722b",
+    });
+  });
+
+setTimeout(function(){
+  var headID = document.getElementsByTagName("head")[0];         
+    var newScript = document.createElement('script');
+    newScript.type = 'text/javascript';
+    newScript.async = true;
+    newScript.src = 'https://cdn.onesignal.com/sdks/OneSignalSDK.js';
+    headID.appendChild(newScript);
+
+    ///gtm code
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T8RV93C');
+}, 5000);
+
+</script>
+
+
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(66417119);
+setTimeout(function(){
+  var headID = document.getElementsByTagName("head")[0];         
+    var newScript = document.createElement('script');
+    newScript.type = 'text/javascript';
+    newScript.async = true;
+    newScript.src = '//static.getclicky.com/js';
+    headID.appendChild(newScript);
+
+    var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38069369-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+}, 6000);
+</script>
+<script async="" defer="" data-domain="hackertyper.com" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/plausible.js.download"></script>
+
+<script defer="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/beacon.min.js.download" data-cf-beacon="{&quot;token&quot;: &quot;c16ffb0c07354c81bca3529e12bca759&quot;}"></script><script defer="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/beacon.min.js.download" data-cf-beacon="{&quot;rayId&quot;:&quot;65fce9d2dca9fc59&quot;,&quot;version&quot;:&quot;2021.5.2&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;8bb6449d9269435ba854dbf0b651c11f&quot;,&quot;si&quot;:10}"></script>
+
+
+<script type="text/javascript" async="" src="./Hacker Typer _ Fake Coding &amp; Hacker Simulator To Prank Your Friends_files/in.php"></script></body></html>
