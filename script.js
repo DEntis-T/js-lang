@@ -7,6 +7,7 @@ open:
 			console.user();	
 		}
 	);
+	native dat.break(7); 
 	public static data.check()
 	{
 		void.def(ip,sys.static);
@@ -40,6 +41,10 @@ open:
 
 				dataget.cons(console);
 			}
+		}
+		inline func.get()
+		{
+			hook data();
 		}
 		else if(console.dataget())
 		{
